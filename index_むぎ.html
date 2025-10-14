@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ワンちゃんホームページ</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* 全体設定 */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Roboto', sans-serif; background: linear-gradient(120deg, #ffafbd, #ffc3a0); color:#fff; text-align:center; }
+
+  /* ヘッダー */
+  header { padding:80px 20px; }
+  header h1 { font-family:'Orbitron', sans-serif; font-size:3em; text-shadow:0 0 15px #fff; animation: fadeIn 2s; }
+  header p { font-size:1.3em; margin-top:10px; animation: fadeIn 3s; }
+
+  /* ボタン */
+  .nav a {
+    display:inline-block; margin:20px 10px; padding:15px 35px;
+    background: linear-gradient(45deg,#ff6a00,#ee0979);
+    color:#fff; text-decoration:none; font-weight:bold; border-radius:40px;
+    box-shadow:0 0 15px #ff6a00,0 0 25px #ee0979;
+    transition: all 0.3s ease;
+  }
+  .nav a:hover { transform: scale(1.1); box-shadow:0 0 25px #ff6a00,0 0 35px #ee0979; }
+
+  /* 画像スライド */
+  .dog-gallery { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:50px 20px; }
+  .dog-gallery img { width:250px; border-radius:20px; transition: transform 0.3s, filter 0.3s; }
+  .dog-gallery img:hover { transform: scale(1.05) rotate(2deg); filter: brightness(1.2); }
+
+  /* アニメーション */
+  @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+  /* フッター */
+  footer { margin-top:50px; padding:20px; font-size:0.9em; color:#fff; text-shadow:0 0 5px #000; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ワンちゃんワールド🐶</h1>
+  <p>かわいい犬たちの世界へようこそ！</p>
+</header>
+
+<div class="nav">
+  <a href="#gallery">犬ギャラリー</a>
+  <a href="#contact">お問い合わせ</a>
+</div>
+
+<section id="gallery" class="dog-gallery">
+  <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?fit=crop&w=400&h=300" alt="犬1">
+  <img src="https://images.unsplash.com/photo-1601758123927-11a0e5736d3e?fit=crop&w=400&h=300" alt="犬2">
+  <img src="https://images.unsplash.com/photo-1583337130417-79b7a20703c6?fit=crop&w=400&h=300" alt="犬3">
+</section>
+
+<section id="contact" style="padding:50px 20px;">
+  <h2 style="font-family:'Orbitron',sans-serif; color:#ff6a00; text-shadow:0 0 10px #fff;">お問い合わせ</h2>
+  <p style="margin-top:10px; color:#fff;">質問やメッセージはこちらからどうぞ！</p>
+  <a href="mailto:info@wanworld.com" style="display:inline-block;margin-top:20px;padding:15px 30px;background:#00c6ff;color:#000;border-radius:30px;font-weight:bold;text-decoration:none;transition:0.3s;">メールを送る</a>
+</section>
+
+<footer>© 2025 ワンちゃんワールド</footer>
+
+</body>
+</html>
