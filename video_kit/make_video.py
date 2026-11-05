@@ -106,8 +106,8 @@ def cmd_build():
     run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", joined])
 
     font = ch.get("font", "Noto Sans CJK JP")
-    style = (f"FontName={font},FontSize=15,Bold=1,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,"
-             f"BorderStyle=1,Outline=3,Shadow=0,Alignment=2,MarginV=70")
+    style = (f"FontName={font},FontSize=16,Bold=1,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,"
+             f"BorderStyle=1,Outline=3,Shadow=0,Alignment=2,MarginV=34")
     vf = f"subtitles={srt_path}:force_style='{style}'"
     inputs = ["-i", joined]
     narr = find(os.path.join(HERE, "narration"))
